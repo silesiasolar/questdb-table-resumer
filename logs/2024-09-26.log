@@ -1,0 +1,46 @@
+No arguments found in the configuration, start with default arguments
+Running as questdb user
+    Using env: QDB_LOG_W_STDOUT_LEVEL=ERROR
+Log configuration loaded from: /var/lib/questdb/conf/log.conf
+2024-09-26T17:08:05.408316Z A server-main QuestDB 8.0.1. Copyright (C) 2014-2024, all rights reserved.
+2024-09-26T17:08:05.974545Z A server-main linux-aarch64 [Vanilla,0, 64 bits, 4 processors]
+2024-09-26T17:08:05.974813Z A server-main fs.file-max checked [limit=1048576]
+2024-09-26T17:08:05.975645Z A server-main vm.max_map_count limit is too low [limit=65530] (SYSTEM COULD BE UNSTABLE)
+2024-09-26T17:08:05.976287Z A server-main make sure to increase fs.file-max and vm.max_map_count limits:
+https://questdb.io/docs/deployment/capacity-planning/#os-configuration
+2024-09-26T17:08:06.200961Z A server-main Server config: /var/lib/questdb/conf/server.conf
+2024-09-26T17:08:06.501622Z A server-main Config:
+2024-09-26T17:08:06.501676Z A server-main  - http.enabled : true
+2024-09-26T17:08:06.501719Z A server-main  - tcp.enabled  : true
+2024-09-26T17:08:06.501753Z A server-main  - pg.enabled   : true
+2024-09-26T17:08:06.501770Z A server-main  - attach partition suffix: .attachable
+2024-09-26T17:08:06.501798Z A server-main  - open database [4826dc8b-a7e8-26df-0e90-b260e4dc1f3c]
+2024-09-26T17:08:06.505819Z A server-main  - db root: [path=/var/lib/questdb/db, magic=0xef53] -> SUPPORTED
+2024-09-26T17:08:06.506109Z A server-main  - backup root: NOT SET
+2024-09-26T17:08:06.506267Z A server-main  - snapshot root: [path=/var/lib/questdb/snapshot, magic=0x00] -> UNSUPPORTED (SYSTEM COULD BE UNSTABLE)
+2024-09-26T17:08:06.506350Z A server-main  - sql copy input root: NOT SET
+2024-09-26T17:08:06.506380Z A server-main  - sql copy input worker root: NOT SET
+2024-09-26T17:08:06.515842Z A server-main  - configured ram.usage.limit.bytes: 0 (no limit)
+2024-09-26T17:08:06.515969Z A server-main  - configured ram.usage.limit.percent: 90
+2024-09-26T17:08:06.516046Z A server-main  - system RAM: 7.9 GiB
+2024-09-26T17:08:06.517036Z A server-main  - resolved RAM usage limit: 7.1 GiB
+2024-09-26T17:08:06.522925Z A server-main Metrics are disabled, health check endpoint will not consider unhandled errors
+2024-09-26T17:08:07.998567Z E i.q.g.e.QueryProgress err [id=-1, sql=`ALTER TABLE telemetry_config ADD COLUMN version symbol`, principal=admin, cache=false, time=2050574, msg=[40] column 'version' already exists, errno=0, pos=40]
+2024-09-26T17:08:07.999603Z E i.q.g.e.QueryProgress err [id=-1, sql=`ALTER TABLE telemetry_config ADD COLUMN os symbol`, principal=admin, cache=false, time=334370, msg=[40] column 'os' already exists, errno=0, pos=40]
+2024-09-26T17:08:07.999889Z E i.q.g.e.QueryProgress err [id=-1, sql=`ALTER TABLE telemetry_config ADD COLUMN package symbol`, principal=admin, cache=false, time=155481, msg=[40] column 'package' already exists, errno=0, pos=40]
+2024-09-26T17:08:08.027928Z A i.q.TelemetryConfigLogger instance [id=0x06221d2d3e390800000040eb14d0f8, enabled=true]
+2024-09-26T17:08:08.114067Z A http-server listening on 0.0.0.0:9000 [fd=105 backlog=256]
+2024-09-26T17:08:08.206684Z A http-min-server listening on 0.0.0.0:9003 [fd=107 backlog=4]
+2024-09-26T17:08:08.213552Z A pg-server listening on 0.0.0.0:8812 [fd=109 backlog=64]
+2024-09-26T17:08:08.217843Z A tcp-line-server listening on 0.0.0.0:9009 [fd=111 backlog=256]
+2024-09-26T17:08:08.326323Z A server-main server is ready to be started
+2024-09-26T17:08:08.405960Z A server-main enjoy
+2024-09-26T17:08:08.579026Z C i.q.c.w.ApplyWal2TableJob job failed, table suspended [table=current~6, error=segment /var/lib/questdb/db/current~6/wal9/1/_event.i does not have txn with id 6239, offset=1266525, indexFileSize=49928, maxTxn=6238, size=1266525, errno=0]
+2024-09-26T17:08:08.609636Z C i.q.c.w.ApplyWal2TableJob job failed, table suspended [table=phase_factor~10, error=segment /var/lib/questdb/db/phase_factor~10/wal9/1/_event.i does not have txn with id 6239, offset=1266525, indexFileSize=49928, maxTxn=6238, size=1266525, errno=0]
+2024-09-26T17:08:08.675031Z C i.q.c.w.ApplyWal2TableJob job failed, table suspended [table=active_energy~12, error=segment /var/lib/questdb/db/active_energy~12/wal9/1/_event.i does not have txn with id 6239, offset=1266525, indexFileSize=49928, maxTxn=6238, size=1266525, errno=0]
+2024-09-26T17:08:08.690305Z C i.q.c.w.ApplyWal2TableJob job failed, table suspended [table=reactive_power~9, error=segment /var/lib/questdb/db/reactive_power~9/wal9/1/_event.i does not have txn with id 6239, offset=1266525, indexFileSize=49928, maxTxn=6238, size=1266525, errno=0]
+2024-09-26T17:08:08.730641Z C i.q.c.w.ApplyWal2TableJob job failed, table suspended [table=reactive_energy~13, error=segment /var/lib/questdb/db/reactive_energy~13/wal9/1/_event.i does not have txn with id 6239, offset=1266525, indexFileSize=49928, maxTxn=6238, size=1266525, errno=0]
+2024-09-26T17:08:08.748210Z C i.q.c.w.ApplyWal2TableJob job failed, table suspended [table=frequency~11, error=segment /var/lib/questdb/db/frequency~11/wal9/1/_event.i does not have txn with id 6239, offset=1266525, indexFileSize=49928, maxTxn=6238, size=1266525, errno=0]
+2024-09-26T17:08:08.814197Z C i.q.c.w.ApplyWal2TableJob job failed, table suspended [table=active_power~7, error=segment /var/lib/questdb/db/active_power~7/wal9/1/_event.i does not have txn with id 6239, offset=1266525, indexFileSize=49928, maxTxn=6238, size=1266525, errno=0]
+2024-09-26T17:08:08.834569Z C i.q.c.w.ApplyWal2TableJob job failed, table suspended [table=apparent_power~8, error=segment /var/lib/questdb/db/apparent_power~8/wal9/1/_event.i does not have txn with id 6239, offset=1266525, indexFileSize=49928, maxTxn=6238, size=1266525, errno=0]
+2024-09-26T17:08:08.861325Z C i.q.c.w.ApplyWal2TableJob job failed, table suspended [table=voltage~5, error=segment /var/lib/questdb/db/voltage~5/wal9/1/_event.i does not have txn with id 6239, offset=1266525, indexFileSize=49928, maxTxn=6238, size=1266525, errno=0]
