@@ -4,10 +4,10 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-psycopg2 = "*"
-python-dateutil = "*"
+psycopg2 = "2.9.9"
+python-dateutil = "2.9.0"
 
 [dev-packages]
 
 [requires]
-python_version = "3.11"
+python_version = "3.9"
